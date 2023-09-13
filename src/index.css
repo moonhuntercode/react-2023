@@ -1,0 +1,74 @@
+@import "./reset.css";
+@font-face {
+  font-family: "Comic Runes2";
+  src: url("./assets/ComicRunes.otf");
+}
+#root {
+  font-family: "Comic Runes2";
+  letter-spacing: 10px;
+  font-size: 3.5vw;
+}
+#dashboard {
+  background: white;
+  width: 100%;
+  border: black solid 5px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+#main_img {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+}
+#mainText {
+  width: 100%;
+
+  font-size: 1.5em;
+  text-align: center;
+  letter-spacing: 20px;
+  padding: 10px;
+}
+#dashboard img {
+  width: 20%;
+}
+.box {
+  background: white;
+  width: 50%;
+  border: black solid 5px;
+  height: 20%;
+  display: inline-flex;
+  flex-flow: column wrap;
+  place-content: center;
+  text-align: center;
+}
+.buttonsContainer {
+  width: 100%;
+  height: 53%;
+  background-color: rebeccapurple;
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+}
+.login {
+  background-color: white;
+}
+.buttons {
+  margin-bottom: 30px;
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.buttons:active {
+  /* transform: scale(1.2); */
+  transition: transform 0.3s ease-in;
+  filter: invert(1);
+}
+span {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
+  background-color: black;
+}
