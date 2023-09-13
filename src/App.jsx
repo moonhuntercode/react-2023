@@ -2,8 +2,11 @@ import { useState } from 'react'
 import rimuru1 from '/acto1.jpeg'
 import rimuru2 from './assets/acto2-recortado.png';
 import './index.css'
+import PropTypes from 'prop-types';
+
 
 export default function App() {
+  
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
 
@@ -50,6 +53,17 @@ function LoginButton({count,onClick}) {
     </div>
   )
 }
+LoginButton.propTypes={
+
+    count: {
+      type: PropTypes.number,
+      required: true
+    },
+    onClick:{
+      type:PropTypes.func,
+      required:true
+    }
+}
 // MyResult.propTypes={
 //   count:propTypes.string.isRequired
 // }
@@ -61,6 +75,10 @@ function DownloadButton({count,onClick}) {
         <img src={rimuru2} alt="rimuru2" />
       </div>
   )
+}
+DownloadButton.propTypes={
+  count: Number.isRequired,
+  onClick:Function.isRequired
 }
 
 
