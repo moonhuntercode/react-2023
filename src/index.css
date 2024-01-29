@@ -40,7 +40,7 @@
   height: 20%;
   display: inline-flex;
   flex-flow: column wrap;
-  place-content: center;
+  place-content: center space-between;
   text-align: center;
 }
 .buttonsContainer {
@@ -54,14 +54,14 @@
 .login {
   background-color: white;
 }
-.buttons {
+.buttons_active {
   margin-bottom: 30px;
   font-size: 4vw;
   font-weight: bold;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.buttons:active {
+.buttons_active:active {
   /* transform: scale(1.2); */
   transition: transform 0.3s ease-in;
   filter: invert(1);
@@ -71,4 +71,18 @@ span {
   color: rgb(255, 255, 255);
   font-size: 3em;
   background-color: black;
+}
+#downloadButton {
+  background: white;
+  width: 50%;
+  border: black solid 5px;
+  height: 30%;
+  display: inline-grid;
+  grid-template-rows: 30px 1fr;
+  place-content: center;
+  place-items: center;
+  box-sizing: content-box;
+}
+#downloadButton img {
+  height: 80%;
 }

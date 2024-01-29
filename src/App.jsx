@@ -47,31 +47,24 @@ function manejandoClick2() {
 }
 function LoginButton({count,onClick}) {
   return(
-    <div onClick={onClick} className="login box buttons">LOG IN
+    <div onClick={onClick} className="login  buttons">LOG IN
     <br/>
       {count} 
     </div>
   )
 }
 LoginButton.propTypes={
-
-    count: {
-      type: PropTypes.number,
-      required: true
-    },
-    onClick:{
-      type:PropTypes.func,
-      required:true
-    }
+count: Number.isRequired,
+  onClick:Function.isRequired
 }
 // MyResult.propTypes={
 //   count:propTypes.string.isRequired
 // }
 function DownloadButton({count,onClick}) {
   return(
-    <div onClick={onClick} className="downloadButton box buttons">
-        DOWNLOAD <br/> {count}
-        <br/>
+    <div onClick={onClick} id='downloadButton' className=" buttons_active">
+        <div>DOWNLOAD  {count}</div>
+        
         <img src={rimuru2} alt="rimuru2" />
       </div>
   )
